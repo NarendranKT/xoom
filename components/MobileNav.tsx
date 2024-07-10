@@ -24,19 +24,21 @@ const MobileNav = () => {
                   <SheetClose asChild>
                      <section className="flex h-full flex-col gap-6 text-white">
                         {sidebarLinks.map((link) => {
-                           const isActive = pathName.startsWith(link.route) || pathName === link.route;
+                           const isActive = pathName === link.route;
 
                            return (
-                              <Link
-                                 href={link.route}
-                                 key={link.label}
-                                 className={cn("flex gap-4 items-center p-4 rounded-lg justify-start", {
-                                    "bg-blue-1": isActive,
-                                 })}
-                              >
-                                 <Image src={link.imgUrl} alt={link.label} width={24} height={24} />
-                                 <p className="text-lg font-semibold">{link.label}</p>
-                              </Link>
+                              <SheetClose asChild key={link.label}>
+                                 <Link
+                                    href={link.route}
+                                    key={link.label}
+                                    className={cn("flex gap-4 items-center p-4 rounded-lg w-full max-w-60", {
+                                       "bg-blue-1": isActive,
+                                    })}
+                                 >
+                                    <Image src={link.imgUrl} alt={link.label} width={20} height={20} />
+                                    <p className="font-semibold">{link.label}</p>
+                                 </Link>
+                              </SheetClose>
                            );
                         })}
                      </section>
