@@ -17,7 +17,22 @@ export default function RootLayout({
 }>) {
    return (
       <html lang="en">
-         <ClerkProvider>
+         <ClerkProvider
+            appearance={{
+               variables: {
+                  colorText: "#fff",
+                  colorPrimary: "#0e78f9",
+                  colorBackground: "#1c1f2e",
+                  colorInputBackground: "#252a41",
+                  colorInputText: "#fff",
+               },
+               layout: {
+                  logoImageUrl: "/icons/logo.svg",
+                  socialButtonsVariant: "iconButton",
+                  animations: true,
+               },
+            }}
+         >
             <body className={`${inter.className} bg-dark-2`}>{children}</body>
          </ClerkProvider>
       </html>
