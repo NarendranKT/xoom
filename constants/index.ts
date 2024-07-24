@@ -29,26 +29,30 @@ export const sidebarLinks = [
 export const meetingTypeList = [
    {
       label: "New Meeting",
-      description: "Setup a new recording",
+      description: "Start an instant meeting",
       icon: "/icons/add-meeting.svg",
-      color: "orange",
+      color: "bg-orange-1",
+      meetingState: 'isJoiningMeeting'
    },
    {
       label: "Join Meeting",
       description: "via invitation link",
       icon: "/icons/join-meeting.svg",
-      color: "blue",
+      color: "bg-blue-1",
+      meetingState: ''
    },
    {
       label: "Schedule Meeting",
       description: "Plan your meeting",
       icon: "/icons/schedule.svg",
-      color: "purple",
+      color: "bg-purple-1",
+      meetingState:'isScheduleMeeting'
    },
    {
       label: "View Recordings",
-      description: "Meeting recordings",
+      description: "Check out your recordings",
       icon: "/icons/Video.svg",
-      color: "yellow",
+      color: "bg-yellow-1",
+      meetingState: ''
    },
 ];
